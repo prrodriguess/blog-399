@@ -5,6 +5,13 @@
   <%= @article.title %>
 </p>
 
+<%# as an image %>
+<% @article.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+
+<%# as a background image %>
+
 <p>
   <strong>Body:</strong>
   <%= @article.body %>
